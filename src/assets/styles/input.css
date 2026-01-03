@@ -1,0 +1,171 @@
+/* components/common/Input.css */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-label {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.input-required {
+  color: #f56565;
+  margin-left: 2px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.input-container-full-width {
+  width: 100%;
+}
+
+.input-container:hover:not(.input-container-disabled):not(.input-container-error) {
+  border-color: #cbd5e0;
+}
+
+.input-container-focused:not(.input-container-disabled):not(.input-container-error) {
+  border-color: #48bb78;
+  box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.1);
+}
+
+.input-container-error {
+  border-color: #f56565;
+}
+
+.input-container-disabled {
+  background-color: #f7fafc;
+  border-color: #e2e8f0;
+  opacity: 0.7;
+}
+
+.input-field {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  background: transparent;
+  color: #2d3748;
+  outline: none;
+  min-width: 0;
+}
+
+.input-field::placeholder {
+  color: #a0aec0;
+}
+
+.input-field.input-full-width {
+  width: 100%;
+}
+
+.input-field.input-disabled {
+  cursor: not-allowed;
+}
+
+.input-field.input-error {
+  color: #f56565;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #718096;
+  padding: 0 0.75rem;
+}
+
+.input-icon-left {
+  border-right: 1px solid #e2e8f0;
+}
+
+.input-icon-right {
+  border-left: 1px solid #e2e8f0;
+}
+
+.input-prefix,
+.input-suffix {
+  padding: 0 0.75rem;
+  color: #718096;
+  font-size: 0.9rem;
+  background: #f7fafc;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input-prefix {
+  border-right: 1px solid #e2e8f0;
+}
+
+.input-suffix {
+  border-left: 1px solid #e2e8f0;
+}
+
+.input-password-toggle {
+  background: none;
+  border: none;
+  padding: 0 0.75rem;
+  color: #718096;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  min-height: 44px;
+}
+
+.input-password-toggle:hover {
+  color: #48bb78;
+}
+
+.input-password-toggle:focus {
+  outline: none;
+  color: #48bb78;
+}
+
+.input-message {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.input-error-message {
+  color: #f56565;
+}
+
+.input-helper-text {
+  color: #718096;
+}
+
+/* Textarea Styles */
+.input-field[type="textarea"] {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+/* Number Input Styles */
+.input-field[type="number"]::-webkit-inner-spin-button,
+.input-field[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Focus State for All Interactive Elements */
+.input-field:focus,
+.input-password-toggle:focus-visible {
+  outline: none;
+}

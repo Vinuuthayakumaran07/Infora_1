@@ -1,0 +1,291 @@
+/* components/common/Card.css - Pricing Card Design */
+.card {
+  background: white;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Borders */
+.card-border {
+  border: 1px solid #e2e8f0;
+}
+
+.card-borderless {
+  border: none;
+}
+
+/* Card Shadows */
+.card-shadow-none {
+  box-shadow: none;
+}
+
+.card-shadow-small {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-shadow-medium {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-shadow-large {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Padding */
+.card-padding-small {
+  padding: 1.5rem;
+}
+
+.card-padding-medium {
+  padding: 2rem;
+}
+
+.card-padding-large {
+  padding: 2.5rem;
+}
+
+/* Card Header - Center aligned for pricing cards */
+.card-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.card-title {
+  color: #2d3748;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2d3748;
+  margin: 0.5rem 0;
+  line-height: 1;
+}
+
+.card-price-period {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #718096;
+  margin-left: 0.25rem;
+  vertical-align: baseline;
+}
+
+.card-subtitle {
+  color: #718096;
+  font-size: 0.95rem;
+  margin: 0.5rem 0 0 0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Card Description */
+.card-description {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Features as Paragraphs */
+.card-features {
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.card-feature-paragraph {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.card-feature-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.card-feature-paragraph::before {
+  content: "•";
+  color: #48bb78;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Card Content */
+.card-content {
+  flex: 1;
+}
+
+.card-content > *:first-child {
+  margin-top: 0;
+}
+
+.card-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Card Footer */
+.card-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Popular Card Styling */
+.card-popular {
+  border: 2px solid #48bb78;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.card-popular .card-title {
+  color: #48bb78;
+}
+
+.card-popular-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: #48bb78;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0 0 4px 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Hover Effects */
+.card-hoverable:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: #48bb78;
+}
+
+.card-popular.card-hoverable:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+/* Card Dark */
+.card-dark {
+  background: #2d3748;
+  color: white;
+  border-color: #4a5568;
+}
+
+.card-dark .card-title,
+.card-dark .card-price {
+  color: white;
+}
+
+.card-dark .card-subtitle,
+.card-dark .card-description,
+.card-dark .card-feature-paragraph {
+  color: #cbd5e0;
+}
+
+.card-dark .card-header,
+.card-dark .card-footer {
+  border-color: #4a5568;
+}
+
+.card-dark .card-feature-paragraph::before {
+  color: #68d391;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-padding-large {
+    padding: 2rem;
+  }
+  
+  .card-padding-medium {
+    padding: 1.5rem;
+  }
+  
+  .card-price {
+    font-size: 2.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+  }
+  
+  .card-popular {
+    transform: scale(1);
+  }
+  
+  .card-popular.card-hoverable:hover {
+    transform: translateY(-8px) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-price {
+    font-size: 2.2rem;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .card-feature-paragraph {
+    font-size: 0.9rem;
+    padding-left: 1.25rem;
+  }
+  
+  .card-padding-small {
+    padding: 1.25rem;
+  }
+  
+  .card-padding-medium {
+    padding: 1.5rem;
+  }
+  
+  .card-padding-large {
+    padding: 1.75rem;
+  }
+}
+
+/* Featured Card with Accent */
+.card-featured {
+  position: relative;
+  overflow: visible;
+}
+
+.card-featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #48bb78, #38a169);
+  border-radius: 4px 4px 0 0;
+}

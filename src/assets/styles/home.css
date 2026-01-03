@@ -1,0 +1,358 @@
+/* Home.css - Wider Cards Version */
+.home {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+/* Hero Section - Full Width */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background: white;
+  color: #48bb78;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Plans Section - Wider Cards */
+.plans-section {
+  padding: 40px 20px;
+  background: #f8f9fa;
+  text-align: center;
+  width: 100%;
+}
+
+.plans-section h2 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #718096;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* WIDER Cards in One Row */
+.plans-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px; /* Increased from 1100px */
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  flex: 1;
+  min-width: 280px; /* Increased from 220px */
+  max-width: 320px; /* Increased from 260px */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Better Medal Styling */
+.medal-container {
+  border-radius: 50%;
+  width: 80px; /* Increased from 60px */
+  height: 80px; /* Increased from 60px */
+  margin: 0 auto 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f7fafc, #edf2f7);
+}
+
+.medal-icon {
+  width: 45px; /* Increased from 35px */
+  height: 45px; /* Increased from 35px */
+}
+
+.medal-label {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #718096;
+  margin-top: 3px;
+}
+
+.plan-title {
+  font-size: 1.4rem; /* Increased from 1.1rem */
+  color: #2d3748;
+  margin-bottom: 0.3rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.plan-price {
+  font-size: 2.2rem; /* Increased from 1.8rem */
+  font-weight: 800;
+  color: #48bb78;
+  margin: 0.4rem 0;
+}
+
+.plan-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  padding: 1rem;
+  margin: 0.8rem 0;
+  background: #f7fafc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-label {
+  color: #718096;
+  font-size: 0.8rem; /* Increased from 0.7rem */
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  color: #2d3748;
+  font-weight: 700;
+  font-size: 1rem; /* Increased from 0.9rem */
+  margin-top: 3px;
+}
+
+.plan-description {
+  color: #718096;
+  margin: 0.8rem 0;
+  text-align: center;
+  font-size: 0.9rem; /* Increased from 0.8rem */
+  line-height: 1.4;
+  font-style: normal;
+  padding: 0 0.5rem;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.feature-item {
+  padding: 0.35rem 0;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem; /* Increased from 0.75rem */
+  line-height: 1.3;
+}
+
+.feature-check {
+  color: #48bb78;
+  font-weight: bold;
+  margin-right: 8px;
+  min-width: 14px;
+  font-size: 0.9rem; /* Increased from 0.8rem */
+}
+
+.select-plan-btn {
+  background: #48bb78;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem; /* Increased from 0.8rem */
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.select-plan-btn:hover {
+  background: #38a169;
+  transform: translateY(-2px);
+}
+
+/* Content Section */
+.content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2d3748;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 25px 20px;
+  background: #f7fafc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: #48bb78;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+.step h3 {
+  color: #2d3748;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.step p {
+  color: #718096;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Make sure everything stays full width */
+.home > * {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .plans-row {
+    gap: 1rem;
+  }
+  
+  .plan-card {
+    min-width: 260px;
+  }
+}
+
+@media (max-width: 900px) {
+  .plans-row {
+    gap: 1rem;
+  }
+  
+  .plan-card {
+    min-width: 240px;
+    max-width: 280px;
+  }
+  
+  .steps {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .step {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .plans-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .plan-card {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .plan-card:last-child {
+    margin-bottom: 0;
+  }
+  
+  .hero {
+    padding: 50px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
