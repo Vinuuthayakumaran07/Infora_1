@@ -1,6 +1,8 @@
+// src/components/layout/Navigation.jsx
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import '../../assets/styles/navigation.css';
+import logoImage from '../../assets/images/logo.png';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,10 +18,19 @@ const Navigation = () => {
   return (
     <nav className="navigation">
       <div className="nav-container">
-        {/* Logo */}
+        {/* Logo with Image and Name */}
         <div className="nav-logo">
-          <Link to="/" onClick={closeMenu}>
-            <span className="logo-text">Fire<span className="logo-highlight">&Forks</span></span>
+          <Link to="/" onClick={closeMenu} className="logo-container">
+            <img
+              src={logoImage}
+              alt="Fire & Forks Logo"
+              className="logo-img"
+            />
+            <div className="logo-text-container">
+              <span className="logo-name logo-name-fire">Fire</span>
+              <span className="logo-ampersand">&</span>
+              <span className="logo-name logo-name-forks">Forks</span>
+            </div>
           </Link>
         </div>
 
@@ -42,6 +53,7 @@ const Navigation = () => {
                 to="/"
                 className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
                 onClick={closeMenu}
+                end
               >
                 Home
               </NavLink>
@@ -59,6 +71,16 @@ const Navigation = () => {
 
             <li className="nav-item">
               <NavLink
+                to="/customer/Dashboard"
+                className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+                onClick={closeMenu}
+              >
+                Customer Dashboard
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
                 to="/contact"
                 className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
                 onClick={closeMenu}
@@ -70,7 +92,7 @@ const Navigation = () => {
             {/* CTA Button */}
             <li className="nav-item cta-item">
               <Link
-                to="/checkout"
+                to="/plans"
                 className="cta-button"
                 onClick={closeMenu}
               >

@@ -1,0 +1,309 @@
+/* src/components/admin/Plans.css */
+.admin-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0F0F1E 0%, #1A1A2E 100%);
+  color: white;
+  padding: 20px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: rgba(45, 48, 71, 0.8);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.header-left h1 {
+  margin: 0 0 8px 0;
+  color: #FF6B6B;
+  font-size: 1.8rem;
+}
+
+.header-left p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.back-btn, .logout-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.logout-btn {
+  background: #FF6B6B;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: #D32F2F;
+}
+
+.admin-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h2 {
+  color: white;
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.page-header .note {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.plans-container {
+  background: rgba(45, 48, 71, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 107, 107, 0.3);
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plan-header h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.plan-id {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.plan-current {
+  margin-bottom: 20px;
+}
+
+.current-price {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FF6B6B;
+  margin-right: 5px;
+}
+
+.period {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+}
+
+.current-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.current-features li {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 6px 0;
+  font-size: 0.9rem;
+}
+
+.current-features li:before {
+  content: '✓';
+  color: #4ECDC4;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.edit-plan-btn {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 107, 107, 0.1);
+  color: #FF6B6B;
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.edit-plan-btn:hover {
+  background: rgba(255, 107, 107, 0.2);
+}
+
+.not-editable {
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: rgba(45, 48, 71, 1);
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.modal h3 {
+  color: white;
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.price-input, .duration-select {
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+}
+
+.duration-select {
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.save-btn, .cancel-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #4ECDC4, #26A69A);
+  color: white;
+}
+
+.save-btn:hover {
+  opacity: 0.9;
+}
+
+.cancel-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+}
